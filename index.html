@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0C0E">
+<title>NS Cars Garage | Vehículos en Buenos Aires</title>
+<meta name="description" content="NS Cars Garage: autos, camionetas, SUV, utilitarios, maquinaria y motos. Precio directo, consultá sin compromiso por WhatsApp.">
+<meta name="keywords" content="vehiculos, autos, camionetas, suv, utilitarios, maquinaria, motos, buenos aires, ns cars garage">
+<meta property="og:title" content="NS Cars Garage">
+<meta property="og:description" content="Autos, camionetas, SUV, utilitarios, maquinaria y motos. Precio directo, consultá sin compromiso.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&family=Barlow:wght@400;500;600&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carbon:#0B0C0E;
+  --panel:#14161A;
+  --steel:#23262C;
+  --line:#2E3138;
+  --bone:#EDEDEA;
+  --gris:#C9CED6;
+  --rojo:#E10600;
+  --rojo-dk:#A80400;
+  --verde:#2FBF71;
+  --ambar:#F2A33C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:#0B0C0E}
+body{background:#0B0C0E !important;color:var(--bone);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;color-scheme:dark}
+header,section,footer{background-color:var(--carbon)}
+h1,h2,h3{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none}
+input,select,textarea{font-family:'Barlow',sans-serif;font-size:15px;background:var(--carbon);border:1px solid var(--line);color:var(--bone);border-radius:6px;padding:10px 12px;width:100%}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--rojo);outline-offset:2px}
+section{scroll-margin-top:80px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:'Chakra Petch',monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rojo);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--rojo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Chakra Petch',monospace;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:13px 24px;border-radius:6px;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:var(--rojo-dk)}
+.btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--rojo);color:#fff}
+.btn-wa{background:#1FAF53;color:#fff}
+.btn-wa:hover{background:#178A41}
+
+/* ---------- NAV ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.97);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:20px;height:66px}
+.logo{font-family:'Saira Condensed',sans-serif;font-weight:800;font-size:24px;letter-spacing:.04em;white-space:nowrap}
+.logo b{color:var(--rojo)}
+.nav-links{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--gris)}
+.nav-links a:hover{color:#fff}
+.nav-search{margin-left:auto;max-width:230px}
+.nav-search input{padding:8px 12px;font-size:14px}
+.nav-wa{white-space:nowrap;padding:9px 16px;font-size:12px}
+@media(max-width:840px){.nav-links{display:none}.nav-search{max-width:150px}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;padding:96px 0 110px;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;top:-20%;right:-14%;width:52%;height:150%;background:linear-gradient(180deg,var(--rojo) 0%,var(--rojo-dk) 100%);transform:skewX(-16deg);opacity:.12}
+.hero::after{content:"";position:absolute;top:-20%;right:6%;width:14px;height:150%;background:var(--rojo);transform:skewX(-16deg);opacity:.5}
+.hero-in{position:relative;max-width:720px}
+.hero h1{font-size:clamp(58px,9vw,116px);font-weight:800;margin:18px 0 22px}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--rojo)}
+.hero p{color:var(--gris);font-size:18px;max-width:480px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-datos{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap}
+.dato .n{font-family:'Chakra Petch',monospace;font-size:26px;font-weight:700;color:#fff}
+.dato .t{font-size:13px;color:var(--gris);letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- CATEGORÍAS + CATÁLOGO ---------- */
+.catalogo{padding:76px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.sec-head h2{font-size:clamp(34px,5vw,52px);font-weight:800;margin-top:12px}
+.sec-head p{color:var(--gris);max-width:380px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.chip{font-family:'Chakra Petch',monospace;font-size:13px;letter-spacing:.05em;text-transform:uppercase;padding:9px 18px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--gris);transition:all .15s ease}
+.chip:hover{color:#fff;border-color:var(--gris)}
+.chip.on{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-4px);border-color:#3d4149}
+.card-img{position:relative;background:#000;aspect-ratio:16/10}
+.card-img img{width:100%;height:100%;object-fit:contain}
+.badge-anio{position:absolute;top:12px;left:12px;font-family:'Chakra Petch',monospace;font-weight:700;font-size:13px;background:#000;border:1.5px solid var(--bone);border-radius:4px;padding:3px 10px;letter-spacing:.1em}
+.badge-estado{position:absolute;top:12px;right:12px;font-family:'Chakra Petch',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:4px 10px;color:#fff}
+.e-disponible{background:var(--verde)}
+.e-reservado{background:var(--ambar);color:#1a1a1a}
+.e-vendido{background:var(--rojo)}
+.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card-body h3{font-size:23px;font-weight:800}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-family:'Chakra Petch',monospace;font-size:13px;color:var(--gris)}
+.specs b{color:var(--bone);font-weight:600}
+.card-precio{font-family:'Chakra Petch',monospace;font-size:24px;font-weight:700;color:var(--rojo)}
+.card-precio small{font-size:13px;color:var(--gris);font-weight:500}
+.card-btns{display:flex;gap:8px;margin-top:auto}
+.card-btns .btn{flex:1;padding:11px 8px;font-size:12px}
+.comp-check{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gris);cursor:pointer;user-select:none}
+.comp-check input{width:auto}
+.vacio{color:var(--gris);text-align:center;padding:60px 0;grid-column:1/-1;font-family:'Chakra Petch',monospace}
+
+/* ---------- DETALLE (inline, sin position:fixed a propósito) ---------- */
+.detalle{display:none;background:var(--panel);border:1px solid var(--rojo);border-radius:12px;padding:26px;margin-bottom:34px}
+.detalle.open{display:block}
+.det-top{display:flex;justify-content:space-between;align-items:start;gap:16px;margin-bottom:18px}
+.det-top h3{font-size:clamp(26px,4vw,38px);font-weight:800}
+.det-cerrar{background:var(--steel);color:var(--bone);border-radius:6px;padding:8px 14px;font-family:'Chakra Petch',monospace;font-size:13px}
+.det-cerrar:hover{background:var(--rojo);color:#fff}
+.det-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+@media(max-width:800px){.det-grid{grid-template-columns:1fr}}
+.det-foto{background:#000;border-radius:8px;aspect-ratio:16/10;overflow:hidden}
+.det-foto img{width:100%;height:100%;object-fit:contain}
+.det-thumbs{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.det-thumbs img{width:74px;height:52px;object-fit:cover;border-radius:5px;border:2px solid transparent;cursor:pointer;background:#000}
+.det-thumbs img.on{border-color:var(--rojo)}
+.det-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-family:'Chakra Petch',monospace;font-size:14px;margin:16px 0}
+.det-specs div{border-bottom:1px solid var(--line);padding-bottom:8px}
+.det-specs span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:2px}
+.det-precio{font-family:'Chakra Petch',monospace;font-size:36px;font-weight:700;color:var(--rojo);margin:6px 0 16px}
+.det-desc{color:var(--gris);margin-bottom:20px}
+
+/* ---------- COMPARADOR ---------- */
+.comparar{padding:70px 0;border-top:1px solid var(--line)}
+.comp-tabla{width:100%;border-collapse:collapse;margin-top:26px;font-size:14px}
+.comp-tabla th,.comp-tabla td{border:1px solid var(--line);padding:12px 14px;text-align:left}
+.comp-tabla th{font-family:'Chakra Petch',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);background:var(--panel)}
+.comp-tabla td{font-family:'Chakra Petch',monospace}
+.comp-tabla td.nom{font-family:'Saira Condensed',sans-serif;font-size:19px;font-weight:800;text-transform:uppercase}
+.comp-hint{color:var(--gris);margin-top:14px}
+.comp-scroll{overflow-x:auto}
+
+/* ---------- OPINIONES ---------- */
+.opiniones{padding:70px 0;border-top:1px solid var(--line)}
+.op-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:30px}
+.op{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+.op p{color:var(--bone);margin-bottom:14px}
+.op .quien{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--gris)}
+.op .fuente{font-family:'Chakra Petch',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+
+/* ---------- CONTACTO ---------- */
+.contacto{padding:70px 0;border-top:1px solid var(--line)}
+.form{max-width:560px;display:grid;gap:14px;margin-top:26px}
+.form label{font-family:'Chakra Petch',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);display:block;margin-bottom:6px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--gris);font-size:14px}
+.foot-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+#footLogo{cursor:default;user-select:none}
+
+/* ---------- ADMIN (inline) ---------- */
+.admin{display:none;padding:60px 0;border-top:2px solid var(--rojo);background:var(--panel)}
+.admin.open{display:block}
+.admin h2{font-size:34px;margin-bottom:8px}
+.admin .sub{color:var(--gris);margin-bottom:24px}
+.adm-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--carbon);border:1px solid var(--line);border-radius:10px;padding:22px;margin-bottom:30px}
+.adm-form .full{grid-column:1/-1}
+@media(max-width:700px){.adm-form{grid-template-columns:1fr}}
+.fotos-prev{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.fp{position:relative}
+.fp img{width:90px;height:64px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+.fp button{position:absolute;top:-8px;right:-8px;width:22px;height:22px;border-radius:50%;background:var(--rojo);color:#fff;font-size:12px;line-height:1}
+.adm-lista{display:grid;gap:10px}
+.adm-item{display:flex;align-items:center;gap:14px;background:var(--carbon);border:1px solid var(--line);border-radius:8px;padding:12px 16px;flex-wrap:wrap}
+.adm-item .nom{font-family:'Saira Condensed',sans-serif;font-weight:800;font-size:19px;text-transform:uppercase;flex:1;min-width:160px}
+.adm-item select{width:auto;padding:7px 10px;font-size:13px}
+.adm-item .mini{padding:8px 12px;font-size:11px}
+.adm-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.login-box{max-width:360px;display:grid;gap:12px}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:100vw;max-height:100vh;object-fit:contain}
+.lb-cerrar{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;background:var(--rojo);color:#fff;font-size:18px;z-index:2}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:64px;background:rgba(20,22,26,.8);color:#fff;font-size:26px;border:1px solid var(--line);border-radius:8px}
+.lb-prev{left:10px}.lb-next{right:10px}
+.lb-cont{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);font-family:'Chakra Petch',monospace;font-size:13px;color:var(--gris);background:rgba(0,0,0,.6);padding:4px 12px;border-radius:999px}
+.det-foto img{cursor:zoom-in}
+
+/* ---------- MOBILE FIRST ---------- */
+.wa-fab{position:fixed;right:16px;bottom:16px;z-index:90;width:58px;height:58px;border-radius:50%;background:#1FAF53;color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+@media(max-width:840px){
+  .nav-in{flex-wrap:wrap;height:auto;padding:10px 0;row-gap:10px}
+  .nav-search{order:3;flex:1 1 100%;max-width:none;margin-left:0}
+  .nav-wa{margin-left:auto}
+  .hero{padding:52px 0 64px}
+  .hero p{font-size:16px}
+  .hero-cta .btn{flex:1;padding:15px 12px}
+  .hero-datos{gap:26px;margin-top:42px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .chip{flex:0 0 auto;padding:11px 18px}
+  .catalogo,.comparar,.opiniones,.contacto{padding:48px 0}
+  .card-btns .btn{padding:14px 8px;font-size:13px}
+  .detalle{padding:18px}
+  .det-precio{font-size:30px}
+  .det-thumbs img{width:64px;height:46px}
+}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#" class="logo">NS <b>CARS</b> GARAGE</a>
+    <div class="nav-links">
+      <a href="#catalogo">Garage</a>
+      <a href="#comparar">Comparar</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="nav-search"><input type="search" id="buscador" placeholder="Buscar vehículo..." aria-label="Buscar vehículo"></div>
+    <a class="btn btn-wa nav-wa" id="waNav" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Buenos Aires · Entrega inmediata</div>
+    <h1>Bienvenido a<br>NS Cars<br><span class="out">Garage</span></h1>
+    <p>Autos, camionetas, SUV, utilitarios, maquinaria y motos. Precio directo y respuesta al toque por WhatsApp.</p>
+    <div class="hero-cta">
+      <a href="#catalogo" class="btn btn-rojo">Ver el garage</a>
+      <a href="#" class="btn btn-ghost" id="waHero" target="_blank" rel="noopener">Consultar ahora</a>
+    </div>
+    <div class="hero-datos">
+      <div class="dato"><div class="n" id="dVehiculos">0</div><div class="t">Vehículos en stock</div></div>
+      <div class="dato"><div class="n">6</div><div class="t">Categorías</div></div>
+      <div class="dato"><div class="n">&lt; 1 h</div><div class="t">Respuesta promedio</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="catalogo" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Stock actualizado</div>
+        <h2>El Garage</h2>
+      </div>
+      <p>Filtrá por categoría o buscá directo. Tocá un vehículo para ver la ficha completa.</p>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría">
+      <button class="chip on" data-cat="todos">Todos</button>
+      <button class="chip" data-cat="auto">Autos</button>
+      <button class="chip" data-cat="camioneta">Camionetas</button>
+      <button class="chip" data-cat="suv">SUV</button>
+      <button class="chip" data-cat="utilitario">Utilitarios</button>
+      <button class="chip" data-cat="maquinaria">Maquinaria</button>
+      <button class="chip" data-cat="moto">Motos</button>
+    </div>
+
+    <div class="detalle" id="detalle" aria-live="polite"></div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="comparar" id="comparar">
+  <div class="wrap">
+    <div class="eyebrow">Lado a lado</div>
+    <h2 style="font-size:clamp(30px,4vw,44px);margin-top:12px">Comparador</h2>
+    <p class="comp-hint" id="compHint">Marcá "Comparar" en hasta 3 vehículos del garage y los ves acá, lado a lado.</p>
+    <div class="comp-scroll" id="compZona"></div>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="wrap">
+    <div class="eyebrow">Clientes reales</div>
+    <h2 style="font-size:clamp(30px,4vw,44px);margin-top:12px">Opiniones</h2>
+    <div class="op-grid">
+      <div class="op"><p>"Consulté por la Hilux un martes y el viernes ya la estaba retirando. Todo claro, sin vueltas."</p><div class="quien"><span>Martín G.</span><span class="fuente">WhatsApp</span></div></div>
+      <div class="op"><p>"Me pasaron todos los detalles y fotos extra antes de viajar a verla. Se nota la transparencia."</p><div class="quien"><span>Carla D.</span><span class="fuente">Google</span></div></div>
+      <div class="op"><p>"Los vi por TikTok y pensé que era humo. Cero humo: el vehículo estaba igual que en el video."</p><div class="quien"><span>Lucas P.</span><span class="fuente">TikTok</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <div class="eyebrow">Sin compromiso</div>
+    <h2 style="font-size:clamp(30px,4vw,44px);margin-top:12px">Consultanos</h2>
+    <form class="form" id="formContacto">
+      <div><label for="fNombre">Nombre</label><input id="fNombre" required placeholder="Tu nombre"></div>
+      <div><label for="fInteres">¿Qué estás buscando?</label><input id="fInteres" required placeholder="Ej: camioneta 4x4 hasta USD 40.000"></div>
+      <div><label for="fMensaje">Mensaje (opcional)</label><textarea id="fMensaje" rows="3" placeholder="Contanos más..."></textarea></div>
+      <button type="button" class="btn btn-wa" id="btnEnviar">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="logo" id="footLogo" title="NS Cars Garage">NS <b>CARS</b> GARAGE</div>
+    <div>
+      <a href="https://www.instagram.com/nscarsgarage" target="_blank" rel="noopener" style="color:var(--bone)">Instagram @nscarsgarage</a>
+      &nbsp;·&nbsp; Buenos Aires, Argentina
+    </div>
+  </div>
+</footer>
+
+<section class="admin" id="admin">
+  <div class="wrap">
+    <div id="adminLogin" class="login-box">
+      <h2>Panel <span style="color:var(--rojo)">NS</span></h2>
+      <p class="sub">Acceso restringido.</p>
+      <input type="password" id="admPass" placeholder="Contraseña" autocomplete="off">
+      <button class="btn btn-rojo" id="admEntrar">Entrar</button>
+    </div>
+
+    <div id="adminPanel" style="display:none">
+      <h2>Panel <span style="color:var(--rojo)">NS</span></h2>
+      <p class="sub">Agregá, editá o marcá vendidos. Los cambios se guardan en este dispositivo/navegador. Usá "Exportar" para hacer backup del stock.</p>
+
+      <div class="adm-tools">
+        <button class="btn btn-ghost" id="btnExportar">Exportar backup</button>
+        <label class="btn btn-ghost" style="cursor:pointer">Importar backup<input type="file" id="inpImportar" accept=".json" style="display:none"></label>
+        <button class="btn btn-ghost" id="btnCerrarAdmin">Cerrar panel</button>
+      </div>
+
+      <form class="adm-form" id="admForm">
+        <input type="hidden" id="vId">
+        <div><label for="vMarca">Marca</label><select id="vMarca"></select></div>
+        <div><label for="vModelo">Modelo</label><select id="vModelo"></select></div>
+        <div class="full" id="rowOtra" style="display:none"><label for="vOtra">Escribí la marca y/o modelo</label><input id="vOtra" placeholder="Ej: Marca Modelo"></div>
+        <div class="full"><label for="vVersion">Versión (opcional)</label><input id="vVersion" placeholder="Ej: SRV 4x4, Highline, Longitude..."></div>
+        <div><label for="vCategoria">Categoría</label>
+          <select id="vCategoria">
+            <option value="auto">Auto</option><option value="camioneta">Camioneta</option><option value="suv">SUV</option>
+            <option value="utilitario">Utilitario</option><option value="maquinaria">Maquinaria</option><option value="moto">Moto</option>
+          </select>
+        </div>
+        <div><label for="vAnio">Año</label><input id="vAnio" type="number" min="1980" max="2030" required placeholder="2022"></div>
+        <div><label for="vKm">Kilometraje</label><input id="vKm" type="number" min="0" required placeholder="60000"></div>
+        <div><label for="vPrecio">Precio (USD)</label><input id="vPrecio" type="number" min="0" required placeholder="38500"></div>
+        <div><label for="vMotor">Motor</label><input id="vMotor" placeholder="Ej: 2.8 TD 204cv"></div>
+        <div><label for="vCaja">Transmisión</label>
+          <select id="vCaja"><option>Manual</option><option>Automática</option><option>CVT</option><option>Automatizada</option></select>
+        </div>
+        <div><label for="vCombustible">Combustible</label>
+          <select id="vCombustible"><option>Nafta</option><option>Diésel</option><option>Nafta/GNC</option><option>Híbrido</option><option>Eléctrico</option></select>
+        </div>
+        <div><label for="vEstado">Estado</label>
+          <select id="vEstado"><option value="disponible">Disponible</option><option value="reservado">Reservado</option><option value="vendido">Vendido</option></select>
+        </div>
+        <div class="full"><label for="vDesc">Descripción</label><textarea id="vDesc" rows="2" placeholder="Detalles, service, extras..."></textarea></div>
+        <div class="full">
+          <label for="vFotos">Fotos (podés elegir varias)</label>
+          <input type="file" id="vFotos" accept="image/*" multiple>
+          <div class="fotos-prev" id="fotosPrev"></div>
+        </div>
+        <div class="full" style="display:flex;gap:10px">
+          <button type="submit" class="btn btn-rojo" id="btnGuardar">Guardar vehículo</button>
+          <button type="button" class="btn btn-ghost" id="btnLimpiar">Limpiar formulario</button>
+        </div>
+      </form>
+
+      <div class="adm-lista" id="admLista"></div>
+    </div>
+  </div>
+</section>
+
+<a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4.5 28l6.2-1.6c1.9 1 4 1.6 6.3 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.7 1 1-3.6-.3-.4C5.9 18.5 5.2 16.8 5.2 15 5.2 9 10 4.2 16 4.2S26.8 9 26.8 15 22 24.8 16 24.8zm5.9-7.3c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg></a>
+
+<div class="lb" id="lb" role="dialog" aria-label="Foto en pantalla completa">
+  <button class="lb-cerrar" id="lbCerrar" aria-label="Cerrar">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Foto anterior">‹</button>
+  <img id="lbImg" src="" alt="Foto del vehículo">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Foto siguiente">›</button>
+  <div class="lb-cont" id="lbCont"></div>
+</div>
+
+<script>
+/* ================= CONFIG ================= */
+const WA = "5491125066054";
+const ADMIN_PASS = "sanjuan528";
+const KEY = "nscars_garage_v2";
+
+/* ================= SYNC CON GITHUB (vía Netlify Function) ================= */
+async function sincronizarGitHub(){
+  try{
+    const res = await fetch("/.netlify/functions/save-vehiculos", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ vehiculos, token: ADMIN_PASS })
+    });
+    if(!res.ok){
+      console.error("Fallo la sincronización con GitHub:", await res.text());
+      alert("Se guardó en este dispositivo, pero no se pudo sincronizar con GitHub. Los demás visitantes no van a ver el cambio todavía.");
+    }
+  }catch(e){
+    console.error(e);
+    alert("Se guardó en este dispositivo, pero no se pudo sincronizar con GitHub (sin conexión).");
+  }
+}
+
+/* Trae el catálogo real (el que vive en GitHub) al abrir la página */
+async function cargarDesdeGitHub(){
+  try{
+    const res = await fetch("/data/vehiculos.json", { cache: "no-store" });
+    if(res.ok){
+      const remoto = await res.json();
+      if(Array.isArray(remoto)){
+        vehiculos = remoto;
+        store.set(vehiculos);
+        render(); renderAdmin(); renderComparador();
+      }
+    }
+  }catch(e){ /* sin conexión: se queda con la copia local del dispositivo */ }
+}
+
+function waLink(msg){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
+document.getElementById("waNav").href  = waLink("Hola! Vengo de la web de NS Cars Garage. Quiero hacer una consulta.");
+document.getElementById("waHero").href = waLink("Hola! Vengo de la web de NS Cars Garage. Quiero hacer una consulta.");
+document.getElementById("waFab").href  = waLink("Hola! Vengo de la web de NS Cars Garage. Quiero hacer una consulta.");
+
+/* ================= STORE (localStorage + fallback en memoria) ================= */
+const store = {
+  mem: null,
+  get(){
+    try{ const raw = localStorage.getItem(KEY); if(raw) return JSON.parse(raw); }catch(e){}
+    return this.mem;
+  },
+  set(d){
+    this.mem = d;
+    try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){}
+  }
+};
+
+/* Placeholder SVG cuando el vehículo no tiene fotos cargadas */
+function ph(nombre){
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400">'
+    + '<rect width="640" height="400" fill="#101215"/>'
+    + '<rect x="0" y="352" width="640" height="6" fill="#E10600"/>'
+    + '<text x="32" y="210" font-family="Arial" font-size="30" font-weight="bold" fill="#EDEDEA">' + nombre.toUpperCase() + '</text>'
+    + '<text x="32" y="246" font-family="Arial" font-size="16" fill="#9BA0A6">Fotos disponibles por WhatsApp</text>'
+    + '</svg>';
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+
+/* ================= SEED ================= */
+function seed(){
+  return [
+    {id:1, marca:"Toyota", modelo:"Hilux", version:"SRV 4x4", nombre:"Toyota Hilux SRV 4x4", cat:"camioneta", anio:2021, km:85000, precio:38500, motor:"2.8 TD 204cv", caja:"Automática", comb:"Diésel", estado:"disponible", desc:"Service oficial completo. Cubiertas nuevas, lona marítima y barra antivuelco.", fotos:[]},
+    {id:2, marca:"Volkswagen", modelo:"Amarok", version:"V6 Highline", nombre:"Volkswagen Amarok V6 Highline", cat:"camioneta", anio:2022, km:60000, precio:45000, motor:"3.0 TDI V6 258cv", caja:"Automática", comb:"Diésel", estado:"disponible", desc:"Único dueño. Cuero, techo eléctrico, llantas 20''.", fotos:[]},
+    {id:3, marca:"Toyota", modelo:"Corolla", version:"SEG", nombre:"Toyota Corolla SEG", cat:"auto", anio:2023, km:30000, precio:27500, motor:"2.0 170cv", caja:"CVT", comb:"Nafta", estado:"disponible", desc:"Full full. Garantía de fábrica vigente.", fotos:[]},
+    {id:4, marca:"Fiat", modelo:"Cronos", version:"Drive", nombre:"Fiat Cronos Drive", cat:"auto", anio:2022, km:45000, precio:14900, motor:"1.3 99cv", caja:"Manual", comb:"Nafta", estado:"disponible", desc:"Ideal primer auto. Muy cuidado, papeles al día.", fotos:[]},
+    {id:5, marca:"Jeep", modelo:"Compass", version:"Longitude", nombre:"Jeep Compass Longitude", cat:"suv", anio:2021, km:70000, precio:28900, motor:"1.3 Turbo 185cv", caja:"Automática", comb:"Nafta", estado:"reservado", desc:"Pantalla 10'', cámara de retroceso, control crucero adaptativo.", fotos:[]},
+    {id:6, marca:"Renault", modelo:"Kangoo", version:"II Confort", nombre:"Renault Kangoo II Confort", cat:"utilitario", anio:2022, km:55000, precio:16800, motor:"1.6 SCe 114cv", caja:"Manual", comb:"Nafta", estado:"disponible", desc:"Furgón vidriado, lista para trabajar. Muy buen estado general.", fotos:[]},
+    {id:7, marca:"Honda", modelo:"XR 250 Tornado", version:"", nombre:"Honda XR 250 Tornado", cat:"moto", anio:2023, km:8000, precio:4900, motor:"250cc mono", caja:"Manual", comb:"Nafta", estado:"disponible", desc:"Impecable, sin caídas. Cubiertas al 90%.", fotos:[]},
+    {id:8, marca:"Toyota", modelo:"8FD25", version:"", nombre:"Autoelevador Toyota 8FD25", cat:"maquinaria", anio:2019, km:0, precio:19500, motor:"Diésel 2.5t", caja:"Automática", comb:"Diésel", estado:"disponible", desc:"2.500 kg de capacidad, torre triple, horas certificadas.", fotos:[]}
+  ];
+}
+
+let vehiculos = store.get();
+if(!vehiculos){ vehiculos = seed(); store.set(vehiculos); }
+
+/* ================= ESTADO UI ================= */
+let catActual = "todos";
+let textoBusqueda = "";
+let comparados = [];
+
+const fmt = n => "USD " + Number(n).toLocaleString("es-AR");
+const fmtKm = n => Number(n).toLocaleString("es-AR") + " km";
+const esc = s => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+/* ================= RENDER CATÁLOGO ================= */
+function fotosDe(v){ return (v.fotos && v.fotos.length) ? v.fotos : [ph(v.nombre)]; }
+
+function render(){
+  const grid = document.getElementById("grid");
+  const lista = vehiculos.filter(v =>
+    (catActual === "todos" || v.cat === catActual) &&
+    v.nombre.toLowerCase().includes(textoBusqueda)
+  );
+  document.getElementById("dVehiculos").textContent = vehiculos.filter(v=>v.estado!=="vendido").length;
+
+  if(!lista.length){
+    grid.innerHTML = '<div class="vacio">No hay vehículos que coincidan. Probá otra búsqueda o consultanos: capaz lo conseguimos.</div>';
+    return;
+  }
+
+  grid.innerHTML = lista.map(v => {
+    const foto = fotosDe(v)[0];
+    const msg = "Hola! Me interesa el " + v.nombre + " " + v.anio + " que vi en NS Cars Garage. ¿Sigue disponible?";
+    return `
+    <article class="card" data-id="${v.id}">
+      <div class="card-img">
+        <img src="${foto}" alt="Venta de ${esc(v.nombre)} ${v.anio}" loading="lazy">
+        <span class="badge-anio">${v.anio}</span>
+        <span class="badge-estado e-${v.estado}">${v.estado}</span>
+      </div>
+      <div class="card-body">
+        <h3>${esc(v.nombre)}</h3>
+        <div class="specs">
+          <div><span>KM</span> <b>${v.cat==="maquinaria" ? "Consultar" : fmtKm(v.km)}</b></div>
+          <div><span>Motor</span> <b>${esc(v.motor)}</b></div>
+          <div><span>Caja</span> <b>${esc(v.caja)}</b></div>
+          <div><span>Comb.</span> <b>${esc(v.comb)}</b></div>
+        </div>
+        <div class="card-precio">${fmt(v.precio)} <small>precio directo</small></div>
+        <label class="comp-check"><input type="checkbox" data-comp="${v.id}" ${comparados.includes(v.id) ? "checked":""}> Comparar</label>
+        <div class="card-btns">
+          <button class="btn btn-ghost" data-ver="${v.id}">Ficha</button>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="${waLink(msg)}">WhatsApp</a>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+/* ================= DETALLE INLINE ================= */
+function abrirDetalle(id){
+  const v = vehiculos.find(x => x.id === id);
+  if(!v) return;
+  const fotos = fotosDe(v);
+  const msg = "Hola! Me interesa el " + v.nombre + " " + v.anio + " que vi en NS Cars Garage. ¿Sigue disponible?";
+  const det = document.getElementById("detalle");
+  det.innerHTML = `
+    <div class="det-top">
+      <div>
+        <div class="eyebrow">Ficha técnica</div>
+        <h3>${esc(v.nombre)}</h3>
+      </div>
+      <button class="det-cerrar" id="btnCerrarDet">Cerrar ✕</button>
+    </div>
+    <div class="det-grid">
+      <div>
+        <div class="det-foto"><img id="detFotoMain" src="${fotos[0]}" alt="${esc(v.nombre)} ${v.anio}"></div>
+        <div class="det-thumbs" id="detThumbs">
+          ${fotos.map((f,i)=>`<img src="${f}" data-i="${i}" class="${i===0?"on":""}" alt="Foto ${i+1}">`).join("")}
+        </div>
+      </div>
+      <div>
+        <span class="badge-estado e-${v.estado}" style="position:static">${v.estado}</span>
+        <div class="det-precio">${fmt(v.precio)}</div>
+        <div class="det-specs">
+          <div><span>Año</span>${v.anio}</div>
+          <div><span>Kilometraje</span>${v.cat==="maquinaria" ? "Consultar" : fmtKm(v.km)}</div>
+          <div><span>Motor</span>${esc(v.motor)}</div>
+          <div><span>Transmisión</span>${esc(v.caja)}</div>
+          <div><span>Combustible</span>${esc(v.comb)}</div>
+          <div><span>Categoría</span>${esc(v.cat)}</div>
+        </div>
+        <p class="det-desc">${esc(v.desc)}</p>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="${waLink(msg)}" style="width:100%">Consultar por WhatsApp</a>
+      </div>
+    </div>`;
+  det.classList.add("open");
+  det.scrollIntoView({behavior:"smooth", block:"start"});
+
+  det.querySelector("#btnCerrarDet").onclick = () => det.classList.remove("open");
+  let cur = 0;
+  det.querySelector("#detThumbs").addEventListener("click", e => {
+    const t = e.target.closest("img[data-i]");
+    if(!t) return;
+    cur = Number(t.dataset.i);
+    det.querySelector("#detFotoMain").src = fotos[cur];
+    det.querySelectorAll("#detThumbs img").forEach(im => im.classList.remove("on"));
+    t.classList.add("on");
+  });
+  det.querySelector("#detFotoMain").addEventListener("click", () => abrirLb(fotos, cur));
+}
+
+/* ================= COMPARADOR ================= */
+function renderComparador(){
+  const zona = document.getElementById("compZona");
+  const hint = document.getElementById("compHint");
+  const sel = vehiculos.filter(v => comparados.includes(v.id));
+  if(sel.length < 2){
+    zona.innerHTML = "";
+    hint.textContent = sel.length === 1
+      ? "Marcaste 1 vehículo. Sumá otro para comparar."
+      : 'Marcá "Comparar" en hasta 3 vehículos del garage y los ves acá, lado a lado.';
+    return;
+  }
+  hint.textContent = "";
+  const fila = (t, fn) => `<tr><th>${t}</th>${sel.map(v=>`<td>${fn(v)}</td>`).join("")}</tr>`;
+  zona.innerHTML = `<table class="comp-tabla">
+    <tr><th></th>${sel.map(v=>`<td class="nom">${esc(v.nombre)}</td>`).join("")}</tr>
+    ${fila("Precio", v=>fmt(v.precio))}
+    ${fila("Año", v=>v.anio)}
+    ${fila("Kilometraje", v=> v.cat==="maquinaria" ? "Consultar" : fmtKm(v.km))}
+    ${fila("Motor", v=>esc(v.motor))}
+    ${fila("Transmisión", v=>esc(v.caja))}
+    ${fila("Combustible", v=>esc(v.comb))}
+    ${fila("Estado", v=>v.estado)}
+  </table>`;
+}
+
+/* ================= EVENTOS CATÁLOGO ================= */
+document.getElementById("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip");
+  if(!b) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+  b.classList.add("on");
+  catActual = b.dataset.cat;
+  render();
+});
+
+document.getElementById("buscador").addEventListener("input", e => {
+  textoBusqueda = e.target.value.trim().toLowerCase();
+  render();
+});
+
+document.getElementById("grid").addEventListener("click", e => {
+  const ver = e.target.closest("[data-ver]");
+  if(ver){ abrirDetalle(Number(ver.dataset.ver)); return; }
+});
+document.getElementById("grid").addEventListener("change", e => {
+  const chk = e.target.closest("[data-comp]");
+  if(!chk) return;
+  const id = Number(chk.dataset.comp);
+  if(chk.checked){
+    if(comparados.length >= 3){ chk.checked = false; alert("Máximo 3 vehículos para comparar."); return; }
+    comparados.push(id);
+  } else {
+    comparados = comparados.filter(x => x !== id);
+  }
+  renderComparador();
+});
+
+/* ================= CONTACTO -> WHATSAPP ================= */
+document.getElementById("btnEnviar").addEventListener("click", () => {
+  const n = document.getElementById("fNombre").value.trim();
+  const i = document.getElementById("fInteres").value.trim();
+  const m = document.getElementById("fMensaje").value.trim();
+  if(!n || !i){ alert("Completá tu nombre y qué estás buscando."); return; }
+  let msg = "Hola! Soy " + n + ". Estoy buscando: " + i + ".";
+  if(m) msg += " " + m;
+  msg += " (Vengo de la web de NS Cars Garage)";
+  window.open(waLink(msg), "_blank");
+});
+
+/* ================= ADMIN ================= */
+let fotosTmp = [];
+
+function abrirAdmin(){
+  const a = document.getElementById("admin");
+  a.classList.add("open");
+  a.scrollIntoView({behavior:"smooth"});
+  document.getElementById("admPass").focus();
+}
+
+/* Trigger 1: escribir "nsadmin" en cualquier parte (fuera de inputs) */
+let buffer = "";
+document.addEventListener("keydown", e => {
+  const tag = (e.target.tagName || "").toLowerCase();
+  if(tag === "input" || tag === "textarea" || tag === "select") return;
+  buffer = (buffer + e.key.toLowerCase()).slice(-7);
+  if(buffer === "nsadmin"){ buffer = ""; abrirAdmin(); }
+});
+
+/* Trigger 2 (para el celu): 5 toques seguidos en el logo del footer */
+let taps = 0, tapTimer = null;
+document.getElementById("footLogo").addEventListener("click", () => {
+  taps++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => taps = 0, 1600);
+  if(taps >= 5){ taps = 0; abrirAdmin(); }
+});
+
+document.getElementById("admEntrar").addEventListener("click", () => {
+  if(document.getElementById("admPass").value === ADMIN_PASS){
+    document.getElementById("adminLogin").style.display = "none";
+    document.getElementById("adminPanel").style.display = "block";
+    document.getElementById("admPass").value = "";
+    renderAdmin();
+  } else {
+    alert("Contraseña incorrecta.");
+  }
+});
+document.getElementById("admPass").addEventListener("keydown", e => {
+  if(e.key === "Enter") document.getElementById("admEntrar").click();
+});
+
+document.getElementById("btnCerrarAdmin").addEventListener("click", () => {
+  document.getElementById("admin").classList.remove("open");
+  document.getElementById("adminPanel").style.display = "none";
+  document.getElementById("adminLogin").style.display = "grid";
+});
+
+/* Fotos: subir varias, preview y borrar */
+document.getElementById("vFotos").addEventListener("change", e => {
+  const files = Array.from(e.target.files || []);
+  files.forEach(f => {
+    const r = new FileReader();
+    r.onload = () => { fotosTmp.push(r.result); renderFotosPrev(); };
+    r.readAsDataURL(f);
+  });
+  e.target.value = "";
+});
+
+function renderFotosPrev(){
+  document.getElementById("fotosPrev").innerHTML = fotosTmp.map((f,i) =>
+    `<div class="fp"><img src="${f}" alt="Foto ${i+1}"><button type="button" data-delfoto="${i}" aria-label="Borrar foto">✕</button></div>`
+  ).join("");
+}
+document.getElementById("fotosPrev").addEventListener("click", e => {
+  const b = e.target.closest("[data-delfoto]");
+  if(!b) return;
+  fotosTmp.splice(Number(b.dataset.delfoto), 1);
+  renderFotosPrev();
+});
+
+function limpiarForm(){
+  document.getElementById("admForm").reset();
+  onMarcaChange();
+  document.getElementById("vId").value = "";
+  fotosTmp = [];
+  renderFotosPrev();
+  document.getElementById("btnGuardar").textContent = "Guardar vehículo";
+}
+document.getElementById("btnLimpiar").addEventListener("click", limpiarForm);
+
+document.getElementById("admForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const idRaw = document.getElementById("vId").value;
+  const marcaSel = selMarca.value;
+  const modeloSel = selModelo.value;
+  const otra = document.getElementById("vOtra").value.trim();
+  const version = document.getElementById("vVersion").value.trim();
+  let partes;
+  if(marcaSel === "Otra") partes = [otra, version];
+  else if(modeloSel === "Otro") partes = [marcaSel, otra, version];
+  else partes = [marcaSel, modeloSel, version];
+  const nombre = partes.filter(Boolean).join(" ").trim();
+  if(!nombre){ alert("Elegí marca y modelo, o escribilos en el campo de texto."); return; }
+  const v = {
+    id: idRaw ? Number(idRaw) : Date.now(),
+    nombre, marca: marcaSel, modelo: modeloSel, otra, version,
+    cat: document.getElementById("vCategoria").value,
+    anio: Number(document.getElementById("vAnio").value),
+    km: Number(document.getElementById("vKm").value),
+    precio: Number(document.getElementById("vPrecio").value),
+    motor: document.getElementById("vMotor").value.trim() || "Consultar",
+    caja: document.getElementById("vCaja").value.trim() || "Consultar",
+    comb: document.getElementById("vCombustible").value.trim() || "Consultar",
+    estado: document.getElementById("vEstado").value,
+    desc: document.getElementById("vDesc").value.trim(),
+    fotos: fotosTmp.slice()
+  };
+  const i = vehiculos.findIndex(x => x.id === v.id);
+  if(i >= 0) vehiculos[i] = v; else vehiculos.unshift(v);
+  store.set(vehiculos);
+  limpiarForm();
+  render(); renderAdmin(); renderComparador();
+  sincronizarGitHub();
+  alert("Guardado ✔ (sincronizando con la web...)");
+});
+
+function renderAdmin(){
+  document.getElementById("admLista").innerHTML = vehiculos.map(v => `
+    <div class="adm-item">
+      <span class="nom">${esc(v.nombre)} · ${v.anio}</span>
+      <span style="font-family:'Chakra Petch',monospace;color:var(--rojo)">${fmt(v.precio)}</span>
+      <select data-estado="${v.id}">
+        <option value="disponible" ${v.estado==="disponible"?"selected":""}>Disponible</option>
+        <option value="reservado" ${v.estado==="reservado"?"selected":""}>Reservado</option>
+        <option value="vendido" ${v.estado==="vendido"?"selected":""}>Vendido</option>
+      </select>
+      <button class="btn btn-ghost mini" data-editar="${v.id}">Editar</button>
+      <button class="btn btn-rojo mini" data-borrar="${v.id}">Borrar</button>
+    </div>`).join("");
+}
+
+document.getElementById("admLista").addEventListener("click", e => {
+  const ed = e.target.closest("[data-editar]");
+  const del = e.target.closest("[data-borrar]");
+  if(ed){
+    const v = vehiculos.find(x => x.id === Number(ed.dataset.editar));
+    if(!v) return;
+    document.getElementById("vId").value = v.id;
+    setMarcaModelo(v);
+    document.getElementById("vVersion").value = v.version || "";
+    document.getElementById("vCategoria").value = v.cat;
+    document.getElementById("vAnio").value = v.anio;
+    document.getElementById("vKm").value = v.km;
+    document.getElementById("vPrecio").value = v.precio;
+    document.getElementById("vMotor").value = v.motor;
+    document.getElementById("vCaja").value = v.caja;
+    document.getElementById("vCombustible").value = v.comb;
+    document.getElementById("vEstado").value = v.estado;
+    document.getElementById("vDesc").value = v.desc;
+    fotosTmp = (v.fotos || []).slice();
+    renderFotosPrev();
+    document.getElementById("btnGuardar").textContent = "Actualizar vehículo";
+    document.getElementById("admForm").scrollIntoView({behavior:"smooth"});
+  }
+  if(del){
+    const id = Number(del.dataset.borrar);
+    const v = vehiculos.find(x => x.id === id);
+    if(v && confirm("¿Borrar " + v.nombre + "? Esta acción no se puede deshacer.")){
+      vehiculos = vehiculos.filter(x => x.id !== id);
+      comparados = comparados.filter(x => x !== id);
+      store.set(vehiculos);
+      render(); renderAdmin(); renderComparador();
+      sincronizarGitHub();
+    }
+  }
+});
+
+document.getElementById("admLista").addEventListener("change", e => {
+  const s = e.target.closest("[data-estado]");
+  if(!s) return;
+  const v = vehiculos.find(x => x.id === Number(s.dataset.estado));
+  if(v){ v.estado = s.value; store.set(vehiculos); render(); sincronizarGitHub(); }
+});
+
+/* Backup: exportar / importar JSON */
+document.getElementById("btnExportar").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(vehiculos, null, 2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "nscars-backup-" + new Date().toISOString().slice(0,10) + ".json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+document.getElementById("inpImportar").addEventListener("change", e => {
+  const f = e.target.files[0];
+  if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try{
+      const data = JSON.parse(r.result);
+      if(!Array.isArray(data)) throw new Error("formato");
+      if(confirm("Se van a reemplazar los " + vehiculos.length + " vehículos actuales por los " + data.length + " del backup. ¿Continuar?")){
+        vehiculos = data;
+        store.set(vehiculos);
+        render(); renderAdmin(); renderComparador();
+        sincronizarGitHub();
+        alert("Backup importado ✔ (sincronizando con la web...)");
+      }
+    }catch(err){ alert("El archivo no es un backup válido de NS Cars."); }
+  };
+  r.readAsText(f);
+  e.target.value = "";
+});
+
+/* ================= MARCAS Y MODELOS (mercado argentino) ================= */
+const MARCAS = {
+  "Audi":["A1","A3","A4","Q2","Q3","Q5"],
+  "Bajaj":["Rouser 135","Rouser 160 NS","Rouser 200 NS","Dominar 250","Dominar 400"],
+  "BMW":["Serie 1","Serie 2","Serie 3","X1","X3","X5"],
+  "Bobcat":["S450","S550","S650"],
+  "Case":["580N","770 EX","W20E"],
+  "Caterpillar":["416F2","320D","924K"],
+  "Chery":["Tiggo 2","Tiggo 3","Tiggo 4 Pro","Tiggo 7 Pro","Tiggo 8 Pro"],
+  "Chevrolet":["Onix","Onix Plus","Cruze","Tracker","S10","Trailblazer","Spin","Montana","Corsa","Prisma","Equinox"],
+  "Citroën":["C3","C3 Aircross","C4 Cactus","C4 Lounge","Berlingo","Jumpy","Jumper"],
+  "Clark":["C25","C30","GTS25"],
+  "Corven":["Energy 110","Triax 150","Triax 250"],
+  "Fiat":["Cronos","Argo","Toro","Strada","Pulse","Mobi","Fiorino","Ducato","Palio","Siena","Uno"],
+  "Ford":["Ranger","F-100","EcoSport","Territory","Bronco Sport","Maverick","Focus","Fiesta","Ka","Kuga","Mondeo","Transit","Cargo 1723"],
+  "Heli":["CPD25","CPCD30"],
+  "Honda":["Civic","City","Fit","HR-V","CR-V","WR-V","XR 250 Tornado","XRE 300","CB 190R","CB 250 Twister","CG 150 Titan","Wave 110"],
+  "Hyundai":["HB20","Creta","Tucson","Santa Fe","Staria"],
+  "Iveco":["Daily","Tector","Cursor","Stralis","Hi-Way"],
+  "JCB":["3CX","4CX","JS130"],
+  "Jeep":["Renegade","Compass","Commander","Wrangler","Grand Cherokee"],
+  "John Deere":["5075E","6110J","310L"],
+  "Kawasaki":["Ninja 400","Z400","Versys-X 300"],
+  "Kia":["Picanto","Cerato","Seltos","Sportage","Sorento"],
+  "KTM":["Duke 200","Duke 390","Adventure 390"],
+  "Mercedes-Benz":["Clase A","Clase C","GLA","GLC","Sprinter","Vito","Accelo","Atego","Actros"],
+  "Motomel":["Blitz 110","S2 150","Skua 250"],
+  "New Holland":["TL75","T6.130","B95B"],
+  "Nissan":["Versa","Sentra","Kicks","X-Trail","Frontier","March","Note"],
+  "Peugeot":["208","2008","3008","408","308","206","207","Partner","Expert","Boxer"],
+  "RAM":["Rampage","1500","2500"],
+  "Renault":["Kwid","Sandero","Logan","Stepway","Duster","Oroch","Alaskan","Captur","Kangoo","Master","Clio","Megane"],
+  "Scania":["P 310","G 360","R 410","R 450"],
+  "Suzuki":["Gixxer 150","GN 125","V-Strom 650"],
+  "Toyota":["Hilux","SW4","Corolla","Corolla Cross","Yaris","Etios","RAV4","Camry","Hiace","Land Cruiser","8FD25","8FG25"],
+  "Volkswagen":["Gol Trend","Polo","Virtus","Vento","Nivus","T-Cross","Taos","Tiguan","Amarok","Saveiro","Up!","Suran","Bora","Delivery"],
+  "Volvo":["FH 460","FM 380","VM 270"],
+  "Yamaha":["YBR 125","FZ 25","XTZ 250","MT-03","Crypton 110"],
+  "Zanella":["ZB 110","RX 150","Styler 150"]
+};
+
+const selMarca = document.getElementById("vMarca");
+const selModelo = document.getElementById("vModelo");
+const rowOtra = document.getElementById("rowOtra");
+
+function poblarMarcas(){
+  selMarca.innerHTML = Object.keys(MARCAS).map(m => `<option>${m}</option>`).join("") + '<option value="Otra">Otra marca...</option>';
+}
+function onMarcaChange(){
+  const m = selMarca.value;
+  if(m === "Otra"){
+    selModelo.innerHTML = '<option value="Otro">—</option>';
+    rowOtra.style.display = "block";
+  } else {
+    selModelo.innerHTML = (MARCAS[m] || []).map(x => `<option>${x}</option>`).join("") + '<option value="Otro">Otro modelo...</option>';
+    rowOtra.style.display = "none";
+  }
+}
+selMarca.addEventListener("change", onMarcaChange);
+selModelo.addEventListener("change", () => {
+  rowOtra.style.display = (selModelo.value === "Otro" || selMarca.value === "Otra") ? "block" : "none";
+});
+poblarMarcas(); onMarcaChange();
+
+function setMarcaModelo(v){
+  let marca = v.marca;
+  if(!marca || (!MARCAS[marca] && marca !== "Otra")){
+    const primera = (v.nombre || "").split(" ")[0];
+    marca = MARCAS[primera] ? primera : "Otra";
+  }
+  selMarca.value = marca;
+  onMarcaChange();
+  const vOtra = document.getElementById("vOtra");
+  if(marca === "Otra"){
+    vOtra.value = v.otra || v.nombre || "";
+    rowOtra.style.display = "block";
+    return;
+  }
+  const lista = MARCAS[marca];
+  let modelo = v.modelo;
+  if(!modelo || modelo === "Otro"){
+    modelo = lista.find(x => (v.nombre || "").toLowerCase().includes(x.toLowerCase())) || v.otra || "Otro";
+  }
+  if(lista.includes(modelo)){
+    selModelo.value = modelo;
+    rowOtra.style.display = "none";
+  } else {
+    selModelo.value = "Otro";
+    vOtra.value = modelo === "Otro" ? "" : modelo;
+    rowOtra.style.display = "block";
+  }
+}
+
+/* ================= LIGHTBOX (foto a pantalla completa) ================= */
+const lb = document.getElementById("lb");
+const lbImg = document.getElementById("lbImg");
+const lbCont = document.getElementById("lbCont");
+let lbFotos = [], lbI = 0;
+
+function abrirLb(fotos, i){
+  lbFotos = fotos; lbI = i || 0;
+  updLb();
+  lb.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function updLb(){
+  lbImg.src = lbFotos[lbI];
+  lbCont.textContent = (lbI + 1) + " / " + lbFotos.length;
+  const una = lbFotos.length < 2;
+  document.getElementById("lbPrev").style.display = una ? "none" : "block";
+  document.getElementById("lbNext").style.display = una ? "none" : "block";
+}
+function cerrarLb(){
+  lb.classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("lbCerrar").addEventListener("click", cerrarLb);
+lb.addEventListener("click", e => { if(e.target === lb) cerrarLb(); });
+document.getElementById("lbPrev").addEventListener("click", () => { lbI = (lbI - 1 + lbFotos.length) % lbFotos.length; updLb(); });
+document.getElementById("lbNext").addEventListener("click", () => { lbI = (lbI + 1) % lbFotos.length; updLb(); });
+document.addEventListener("keydown", e => {
+  if(!lb.classList.contains("open")) return;
+  if(e.key === "Escape") cerrarLb();
+  if(e.key === "ArrowLeft") document.getElementById("lbPrev").click();
+  if(e.key === "ArrowRight") document.getElementById("lbNext").click();
+});
+
+/* Tocar la foto de una card abre la ficha directo (clave en el celu) */
+document.getElementById("grid").addEventListener("click", e => {
+  const img = e.target.closest(".card-img");
+  if(!img) return;
+  const art = img.closest(".card");
+  if(art) abrirDetalle(Number(art.dataset.id));
+});
+
+/* ================= INIT ================= */
+render();
+cargarDesdeGitHub();
+</script>
+</body>
+</html>
